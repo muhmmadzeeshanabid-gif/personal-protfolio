@@ -1,5 +1,5 @@
 // Logo
-import logo from "../assets/logo/logo.svg";
+import logo from "../assets/logo/Logo.svg";
 
 // Skill Icons
 import figma from "../assets/skillicon/icon-figma.svg";
