@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap");
+
+@theme {
+  /* Colors */
+  --color-primary-black: #000000;
+  --color-primary-neutral: #404040;
+  --color-primary-white: #ffffff;
+
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-500: #71717a;
+  --color-zinc-800: #27272a;
+
+  --color-error-500: #ef4444;
+
+  /* Font Sizes */
+  --font-size-display: 48px;
+  --font-size-h2: 32px;
+  --font-size-h3: 28px;
+  --font-size-h4: 24px;
+  --font-size-h5: 20px;
+  --font-size-h6: 16px;
+  --font-size-p1: 20px;
+  --font-size-p2: 16px;
+  --font-size-p3: 12px;
+  --font-size-btn: 20px;
+  --font-size-btn2: 16px;
+
+  /* Line Heights */
+  --line-height-display: 56px;
+  --line-height-h2: 40px;
+  --line-height-h3: 32px;
+  --line-height-h4: 28px;
+  --line-height-h5: 24px;
+  --line-height-h6: 20px;
+  --line-height-p1: 24px;
+  --line-height-p2: 20px;
+  --line-height-p3: 16px;
+  --line-height-btn: 24px;
+  --line-height-btn2: 20px;
+
+  /* Letter Spacing (Tracking) */
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.02em;
+
+  /* Border Radius */
+  --radius-btn: 2px;
+}
+
+@import "tailwindcss";
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-[var(--radius-btn)] transition-all duration-200 font-semibold tracking-[var(--tracking-wide)];
+  }
+
+  /* Medium Button */
+  .btn-md {
+    @apply text-base leading-6;
+  }
+
+  /* Small Button */
+  .btn-sm {
+    @apply px-4 py-2 text-sm leading-5;
+  }
+
+  /* Primary Button Style (Small & Forced Hover) */
+  .btn-primary {
+    @apply bg-primary-black text-primary-white border-2 border-transparent transition-all;
+    padding: 8px 18px !important;
+    width: fit-content;
+  }
+
+  .btn-primary img {
+    @apply filter invert;
+  }
+
+  .btn-primary:hover {
+    background-color: #71717a !important;
+    border-color: #71717a !important;
+    @apply text-primary-white opacity-100;
+    color: white !important;
+  }
+
+  .btn-primary:active,
+  .btn-primary.active {
+    @apply bg-primary-white text-primary-black border-primary-black;
+  }
+
+  .btn-primary:active img,
+  .btn-primary.active img {
+    @apply filter-none;
+    /* Icon becomes black on white background */
+  }
+
+  /* Nav Link Style */
+  .nav-link {
+    @apply font-bold cursor-pointer transition-all border-b-2 border-transparent text-base leading-6 text-primary-black pb-1;
+    border-bottom-color: transparent !important;
+  }
+
+  .nav-link:hover {
+    color: #71717a !important;
+    border-bottom-color: #71717a !important;
+  }
+
+  .nav-link.active {
+    @apply text-primary-black;
+  }
+
+  /* Outlined Text Variants */
+  .text-outline {
+    -webkit-text-stroke: 1px #000000;
+    color: transparent;
+    @apply font-extrabold uppercase;
+  }
+
+  /* Strong outlined text: big stroke with visible fill (stroke painted first)
+     Use for hero headings where you want bold outline + fill on top */
+  .text-outline-strong {
+    -webkit-text-stroke: 6px #000000;
+    -webkit-text-fill-color: #ffffff;
+    paint-order: stroke;
+    color: #ffffff;
+    @apply font-extrabold uppercase;
+  }
+
+  /* Inverse variant: white stroke with dark fill (use on light backgrounds)
+     Adjust stroke width as needed */
+  .text-outline-inverse {
+    -webkit-text-stroke: 3px #ffffff;
+    -webkit-text-fill-color: #000000;
+    paint-order: stroke;
+    color: #000000;
+    @apply font-extrabold uppercase;
+  }
+
+  /* Custom Input & Textarea Style */
+  .input-field {
+    @apply w-full p-4 border-2 border-black rounded-[var(--radius-btn)] transition-all duration-200 bg-primary-white text-primary-black font-semibold outline-none;
+    border-color: #000000 !important;
+  }
+
+  .input-field:hover {
+    @apply bg-zinc-100;
+  }
+
+  .input-field:focus {
+    @apply bg-primary-white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Social Icon Style */
+  .social-icon {
+    @apply w-12 h-12 flex items-center justify-center border-2 border-primary-black rounded-[var(--radius-btn)] transition-all bg-primary-white text-primary-black;
+  }
+
+  .social-icon:hover,
+  .social-icon:active,
+  .social-icon.active {
+    @apply bg-primary-black text-primary-white;
+  }
+
+  .social-icon img {
+    @apply w-6 h-6 transition-all;
+  }
+
+  .social-icon:hover img,
+  .social-icon:active img,
+  .social-icon.active img {
+    @apply filter invert;
+  }
+
+  /* Tag styles */
+  .tag-about {
+    @apply inline-block border-b-2 border-primary-black font-bold text-[length:var(--font-size-btn)] leading-[var(--line-height-btn)];
+  }
+
+  .tag-category {
+    @apply inline-flex items-center gap-2 px-4 py-2 border-2 border-primary-black rounded-[var(--radius-btn)] font-bold text-[length:var(--font-size-h6)] leading-[var(--line-height-h6)];
+  }
+}
+
+* {
+  font-family: "Sora", sans-serif;
+}
