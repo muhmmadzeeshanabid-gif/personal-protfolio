@@ -1,5 +1,5 @@
 import React from "react";
-import aboutMeImg from "../assets/about-me.png";
+import aboutMeImg from "../assets/WhatsApp Image 2026-02-11 at 11.34.31 AM.jpeg";
 
 const About = () => {
   return (

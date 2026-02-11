@@ -239,7 +239,7 @@ const Contact = () => {
                 </a>
               </p>
               <p className="text-xl md:text-2xl font-bold text-primary-black">
-                03216287487
+                +92 (321)-6287-487
               </p>
             </div>
           </div>
