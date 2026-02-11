@@ -5,6 +5,8 @@ import social2 from "../assets/socialicon/Social icon (2).svg";
 import social3 from "../assets/socialicon/Social icon (3).svg";
 import social4 from "../assets/socialicon/Social icon (4).svg";
 import heroImage from "../assets/react.svg";
+import myImage from "../assets/WhatsApp Image 2026-02-11 at 3.26.18 PM.jpeg";
+
 
 const Hero = () => {
   return (
@@ -53,7 +55,7 @@ const Hero = () => {
         <div className="flex-1 flex flex-col items-center justify-center md:pt-[31px] pt-0">
           <div className="relative w-full max-w-[517px]">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+              src={myImage}
               alt="Professional Portrait"
               className="w-full h-auto max-h-[460px] object-cover object-top rounded-2xl shadow-xl grayscale"
             />
