@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import social1 from "../assets/socialicon/Social icon (1).svg";
 import social2 from "../assets/socialicon/Social icon (2).svg";
 import social3 from "../assets/socialicon/Social icon (3).svg";
 import social4 from "../assets/socialicon/Social icon (4).svg";
+import social5 from "../assets/socialicon/icons8-github.svg";
+
 import Button from "./Button";
 
 // Initialize EmailJS (replace with your Public Key)
@@ -21,15 +22,21 @@ const Contact = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // ✅ UPDATED: All validations except website
   const validate = () => {
     let newErrors = {};
+
     if (!formData.name.trim()) newErrors.name = true;
+
     if (!formData.email.trim()) {
       newErrors.email = true;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = true;
     }
-    if (!formData.website.trim()) newErrors.website = true;
+
+    // ❌ website validation removed
+    // if (!formData.website.trim()) newErrors.website = true;
+
     if (!formData.message.trim()) newErrors.message = true;
 
     setErrors(newErrors);
@@ -41,7 +48,6 @@ const Contact = () => {
     if (validate()) {
       setLoading(true);
 
-      // Send email using EmailJS (service & template set to provided IDs)
       emailjs
         .sendForm("service_05g630d", "template_wvfz7di", form.current, {
           publicKey: "GYyObiQSUK2ZAuIru",
@@ -67,14 +73,12 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error as soon as user modifies the field
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: false }));
     }
   };
 
   const handleFocus = (name) => {
-    // Clear error when user focuses the field
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: false }));
     }
@@ -88,15 +92,12 @@ const Contact = () => {
     const value = formData[fieldName] || "";
     const isFilled = value.trim() !== "";
 
-    // Default: Black border (as requested)
-    // Filled: Gray border (zinc-400)
     let classes = isError
       ? "border-[#ef4444]"
       : isFilled
         ? "border-zinc-400"
         : "border-black";
 
-    // Only apply hover effects if the field is NOT filled and NOT in error state
     if (!isFilled && !isError) {
       classes += " hover:bg-zinc-100 hover:border-zinc-500";
     }
@@ -106,7 +107,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-primary-white relative">
-      {/* Success Pop-up */}
       {showSuccess && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/20 backdrop-blur-sm">
           <div className="bg-white p-8 rounded-lg border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] max-w-sm w-full text-center space-y-4">
@@ -141,14 +141,12 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-          {/* Left side: Form */}
           <div className="flex-1">
             <form
               ref={form}
               onSubmit={handleSubmit}
               className="flex flex-col gap-5"
             >
-              {/* Hidden fields for EmailJS template variables (keeps React state names intact) */}
               <input type="hidden" name="user_name" value={formData.name} />
               <input type="hidden" name="user_email" value={formData.email} />
               <input
@@ -156,6 +154,7 @@ const Contact = () => {
                 name="user_website"
                 value={formData.website}
               />
+
               <input
                 type="text"
                 name="name"
@@ -165,6 +164,7 @@ const Contact = () => {
                 onFocus={() => handleFocus("name")}
                 className={`${inputBaseClass} ${getFieldClasses("name")}`}
               />
+
               <input
                 type="email"
                 name="email"
@@ -174,15 +174,16 @@ const Contact = () => {
                 onFocus={() => handleFocus("email")}
                 className={`${inputBaseClass} ${getFieldClasses("email")}`}
               />
+
               <input
                 type="text"
                 name="website"
                 placeholder="Your website (If exists)"
                 value={formData.website}
                 onChange={handleChange}
-                onFocus={() => handleFocus("website")}
                 className={`${inputBaseClass} ${getFieldClasses("website")}`}
               />
+
               <textarea
                 name="message"
                 placeholder="How can I help?*"
@@ -201,11 +202,14 @@ const Contact = () => {
                 />
 
                 <div className="flex items-center gap-4">
-                  <a href="#" className="social-icon group">
-                    <img src={social2} alt="Facebook" />
+                  <a
+                    href="https://github.com/muhmmadzeeshanabid-gif"
+                    className="social-icon group"
+                  >
+                    <img src={social5} alt="icon" />
                   </a>
                   <a href="#" className="social-icon group">
-                    <img src={social1} alt="GitHub" />
+                    <img src={social2} alt="facebook" />
                   </a>
                   <a href="#" className="social-icon group">
                     <img src={social3} alt="Twitter" />
@@ -218,7 +222,6 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Right side: Content */}
           <div className="flex-1 space-y-8 lg:mt-[80px]">
             <div className="space-y-4">
               <h2 className="text-4xl md:text-5xl lg:text-[56px] leading-tight font-extrabold text-primary-black tracking-tight">

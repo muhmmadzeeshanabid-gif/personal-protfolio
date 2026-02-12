@@ -23,7 +23,6 @@ const Footer = () => {
               @ 2025-{currentYear}{" "}
               <span className="text-white font-semibold">Zeeshan Abid</span>
             </p>
-            <p className="text-zinc-500 text-xs md:text-sm">Made In Zeeshan</p>
           </div>
         </div>
       </div>

@@ -1,12 +1,13 @@
 import React from "react";
 import { colors } from "../constants";
-import social1 from "../assets/socialicon/Social icon (1).svg";
+
 import social2 from "../assets/socialicon/Social icon (2).svg";
 import social3 from "../assets/socialicon/Social icon (3).svg";
 import social4 from "../assets/socialicon/Social icon (4).svg";
+import social5 from "../assets/socialicon/icons8-github.svg";
+
 import heroImage from "../assets/react.svg";
 import myImage from "../assets/WhatsApp Image 2026-02-11 at 3.26.18 PM.jpeg";
-
 
 const Hero = () => {
   return (
@@ -36,8 +37,11 @@ const Hero = () => {
 
           {/* Social Icons */}
           <div className="flex items-center gap-6 pt-2">
-            <a href="#" className="social-icon group">
-              <img src={social1} alt="GitHub" />
+            <a
+              href="https://github.com/muhmmadzeeshanabid-gif"
+              className="social-icon group"
+            >
+              <img src={social5} alt="GitHub" />
             </a>
             <a href="#" className="social-icon group">
               <img src={social2} alt="Facebook" />
