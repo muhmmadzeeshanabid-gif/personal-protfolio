@@ -19,7 +19,7 @@ const testimonials = [
     },
     {
         id: 3,
-        name: "Evren Shah",
+        name: "Rimsha",
         role: "Designer",
         content:
             "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
