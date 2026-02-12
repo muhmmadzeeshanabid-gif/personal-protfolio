@@ -8,9 +8,6 @@ const About = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-24">
           {/* Illustration Section */}
           <div className="relative w-full max-w-[500px] flex-shrink-0 flex flex-col items-center lg:items-start">
-            {/* Left Blue Accent */}
-            <div className="absolute top-1/2 -left-10 w-1 h-8 bg-sky-400 -translate-y-1/2 hidden md:block"></div>
-
             <div className="border-2 border-primary-black pt-6 px-6 rounded-2xl bg-primary-white shadow-xl relative z-10 overflow-hidden flex items-end">
               <img
                 src={aboutMeImg}
@@ -19,12 +16,7 @@ const About = () => {
               />
             </div>
 
-            {/* Bottom Blue Accent (Centered) - Desktop Only */}
-            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-8 h-1 bg-sky-400 hidden lg:block"></div>
-            {/* Right Blue Accent */}
-            <div className="absolute top-1/2 -right-10 w-1 h-8 bg-sky-400 -translate-y-1/2 hidden md:block"></div>
-
-            {/* Static Divider for Mobile (Image Bottom) */}
+            {/* Keep Mobile Bottom Blue Line Only */}
             <div className="w-8 h-1 bg-sky-400 mt-12 lg:hidden"></div>
           </div>
 

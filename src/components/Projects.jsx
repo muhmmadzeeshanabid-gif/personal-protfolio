@@ -1,6 +1,6 @@
 import React from "react";
 import screenImg from "../assets/projects/Screenshot 2026-02-09 103501.png";
-import ecommerceImg from "../assets/projects/ecommerce.png";
+import ecommerceImg from "../assets/projects/Screenshot 2026-02-11 174943.png";
 import blogImg from "../assets/projects/blog.png";
 import linkIcon from "../assets/othericon/Read More.svg";
 
@@ -9,25 +9,18 @@ const projects = [
     id: "01",
     title: "Brainwave - AI Chat Demo",
     description:
-      "A demo UI for Brainwave — an AI chat interface showcasing interactive generation and visual presentation.",
-    // place the screenshot file in the public folder at /assets/brainwave-screenshot.png
+      "A fully responsive AI Chat UI built using React, JSX, and Tailwind CSS. This project includes smooth animations, interactive chat components, and a modern layout inspired by real AI chat experiences.",
     image: screenImg,
-
     link: "https://brainwave-orcin-six.vercel.app/",
   },
+
   {
     id: "02",
-    title: "Euphoria - Ecommerce (Apparel) Website Template",
+    title: "Bar Law — Professional Law Firm Website",
     description:
-      "I'm Zeeshan Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
+      "A clean and modern Law Firm website created with React and Tailwind CSS. The site features practice areas, lawyer profiles, testimonials, and a professional layout suitable for legal services. Fully responsive and optimized for fast loading.",
     image: ecommerceImg,
-  },
-  {
-    id: "03",
-    title: "Blog Website Template",
-    description:
-      "I'm Zeeshan Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
-    image: blogImg,
+    link: "https://bar-law-website.vercel.app/",
   },
 ];
 
@@ -52,9 +45,26 @@ const Projects = () => {
                   isEven ? "md:flex-row-reverse" : "md:flex-row"
                 }`}
               >
-                {/* Image container */}
                 <div className="flex-1 w-full">
-                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group cursor-pointer border border-zinc-800">
+
+                  {/* Mobile: Clickable Image */}
+                  <a
+                    href={project.link || "#"}
+                    target={project.link ? "_blank" : undefined}
+                    rel={project.link ? "noreferrer noopener" : undefined}
+                    className="md:hidden block"
+                  >
+                    <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group cursor-pointer border border-zinc-800">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                  </a>
+
+                  {/* Desktop: Only hover, no click */}
+                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group cursor-pointer border border-zinc-800 hidden md:block">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -63,7 +73,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Content container */}
                 <div className="flex-1 space-y-4 md:space-y-6">
                   <span className="text-4xl md:text-5xl font-extrabold tracking-tight">
                     {project.id}

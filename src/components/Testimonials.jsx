@@ -3,8 +3,8 @@ import React from "react";
 const testimonials = [
     {
         id: 1,
-        name: "Evren Shah",
-        role: "Designer",
+        name: "Sarah",
+        role: "Devolper",
         content:
             "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
         avatar: "https://i.pravatar.cc/150?u=1",
