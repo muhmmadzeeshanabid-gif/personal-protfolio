@@ -203,8 +203,9 @@ const Contact = () => {
 
                 <div className="flex items-center gap-4">
                   <a
-                    href="https://github.com/muhmmadzeeshanabid-gif"
-                    className="social-icon group"
+ href="https://github.com/muhmmadzeeshanabid-gif"
+  target="_blank"
+  rel="noopener noreferrer"                    className="social-icon group"
                   >
                     <img src={social5} alt="icon" />
                   </a>

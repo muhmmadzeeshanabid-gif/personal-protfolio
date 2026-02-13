@@ -38,8 +38,9 @@ const Hero = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-6 pt-2">
             <a
-              href="https://github.com/muhmmadzeeshanabid-gif"
-              className="social-icon group"
+ href="https://github.com/muhmmadzeeshanabid-gif"
+  target="_blank"
+  rel="noopener noreferrer" className="social-icon group"
             >
               <img src={social5} alt="GitHub" />
             </a>
