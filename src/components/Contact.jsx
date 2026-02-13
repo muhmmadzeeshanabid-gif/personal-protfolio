@@ -208,13 +208,17 @@ const Contact = () => {
                   >
                     <img src={social5} alt="icon" />
                   </a>
-                  <a href="https://www.facebook.com/profile.php?id=61588081470113" className="social-icon group">
+                  <a href="https://www.facebook.com/profile.php?id=61588081470113"
+  target="_blank"
+  rel="noopener noreferrer" className="social-icon group">
                     <img src={social3} alt="facebook" />
                   </a>
                   {/* <a href="#" className="social-icon group">
                     <img src={social2} alt="Twitter" />
                   </a> */}
-                  <a href="https://www.linkedin.com/in/muhammad-zeeshan-abid-205185385/" className="social-icon group">
+                  <a  href="https://www.linkedin.com/in/muhammad-zeeshan-abid-205185385/"
+  target="_blank"
+  rel="noopener noreferrer" className="social-icon group">
                     <img src={social4} alt="linkedin" />
                   </a>
                 </div>
