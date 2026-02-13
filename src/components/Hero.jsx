@@ -1,10 +1,10 @@
 import React from "react";
 import { colors } from "../constants";
 
-import social2 from "../assets/socialicon/Social icon (2).svg";
+// import social2 from "../assets/socialicon/Social icon (2).svg";
 import social3 from "../assets/socialicon/Social icon (3).svg";
-import social4 from "../assets/socialicon/Social icon (4).svg";
-import social5 from "../assets/socialicon/icons8-github.svg";
+import social4 from "../assets/socialicon/linkedin.svg";
+ import social5 from "../assets/socialicon/icons8-github.svg";
 
 import heroImage from "../assets/react.svg";
 import myImage from "../assets/WhatsApp Image 2026-02-11 at 3.26.18 PM.jpeg";
@@ -43,14 +43,14 @@ const Hero = () => {
             >
               <img src={social5} alt="GitHub" />
             </a>
-            <a href="#" className="social-icon group">
-              <img src={social2} alt="Facebook" />
+            <a href="https://www.facebook.com/profile.php?id=61588081470113" className="social-icon group">
+              <img src={social3} alt="Facebook" />
             </a>
-            <a href="#" className="social-icon group">
-              <img src={social3} alt="Twitter" />
-            </a>
-            <a href="#" className="social-icon group">
-              <img src={social4} alt="Instagram" />
+            {/* <a href="#" className="social-icon group">
+              <img src={social2} alt="Twitter" />
+            </a> */}
+            <a href="https://www.linkedin.com/in/muhammad-zeeshan-abid-205185385/" className="social-icon group">
+              <img src={social4} alt="linkein" />
             </a>
           </div>
         </div>

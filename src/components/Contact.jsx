@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import social2 from "../assets/socialicon/Social icon (2).svg";
+// import social2 from "../assets/socialicon/Social icon (2).svg";
 import social3 from "../assets/socialicon/Social icon (3).svg";
-import social4 from "../assets/socialicon/Social icon (4).svg";
+import social4 from "../assets/socialicon/linkedin.svg";
 import social5 from "../assets/socialicon/icons8-github.svg";
 
 import Button from "./Button";
@@ -208,14 +208,14 @@ const Contact = () => {
                   >
                     <img src={social5} alt="icon" />
                   </a>
-                  <a href="#" className="social-icon group">
-                    <img src={social2} alt="facebook" />
+                  <a href="https://www.facebook.com/profile.php?id=61588081470113" className="social-icon group">
+                    <img src={social3} alt="facebook" />
                   </a>
-                  <a href="#" className="social-icon group">
-                    <img src={social3} alt="Twitter" />
-                  </a>
-                  <a href="#" className="social-icon group">
-                    <img src={social4} alt="Instagram" />
+                  {/* <a href="#" className="social-icon group">
+                    <img src={social2} alt="Twitter" />
+                  </a> */}
+                  <a href="https://www.linkedin.com/in/muhammad-zeeshan-abid-205185385/" className="social-icon group">
+                    <img src={social4} alt="linkedin" />
                   </a>
                 </div>
               </div>

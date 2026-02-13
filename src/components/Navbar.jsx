@@ -6,6 +6,16 @@ import Button from "./Button";
 import Link from "./Link";
 
 const Navbar = ({ activeLink, onLinkClick, isOpen, onToggleMenu }) => {
+  // Function to download CV from public folder
+  const downloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/Zeeshan_CV.pdf"; // Place your CV in public folder
+    link.download = "Zeeshan_CV.pdf"; // Name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav className="flex items-center justify-between py-6">
       {/* Left - Logo + Brand (Clickable) */}
@@ -24,7 +34,7 @@ const Navbar = ({ activeLink, onLinkClick, isOpen, onToggleMenu }) => {
       {/* Right - Desktop Resume Button / Mobile Hamburger */}
       <div className="flex items-center">
         <div className="hidden md:block">
-          <Button text="Resume" icon={downloadIcon} />
+          <Button text="Resume" icon={downloadIcon} onClick={downloadCV} />
         </div>
 
         <button
@@ -52,7 +62,7 @@ const Navbar = ({ activeLink, onLinkClick, isOpen, onToggleMenu }) => {
             <Link href="#projects" text="Projects" className="text-xl" isActive={activeLink === "#projects"} onClick={onLinkClick} />
             <Link href="#contact" text="Contact Me" className="text-xl" isActive={activeLink === "#contact"} onClick={onLinkClick} />
             <div className="pt-2 flex justify-center">
-              <Button text="Resume" icon={downloadIcon} />
+              <Button text="Resume" icon={downloadIcon} onClick={downloadCV} />
             </div>
           </div>
         </div>
@@ -62,4 +72,3 @@ const Navbar = ({ activeLink, onLinkClick, isOpen, onToggleMenu }) => {
 };
 
 export default Navbar;
-
