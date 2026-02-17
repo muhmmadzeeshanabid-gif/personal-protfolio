@@ -25,10 +25,30 @@ const Navbar = ({ activeLink, onLinkClick, isOpen, onToggleMenu }) => {
 
       {/* Center - Desktop Links */}
       <div className="hidden md:flex items-center gap-8">
-        <Link href="#about" text="About Me" isActive={activeLink === "#about"} onClick={onLinkClick} />
-        <Link href="#skills" text="Skills" isActive={activeLink === "#skills"} onClick={onLinkClick} />
-        <Link href="#projects" text="Projects" isActive={activeLink === "#projects"} onClick={onLinkClick} />
-        <Link href="#contact" text="Contact Me" isActive={activeLink === "#contact"} onClick={onLinkClick} />
+        <Link
+          href="#about"
+          text="About Me"
+          isActive={activeLink === "#about"}
+          onClick={onLinkClick}
+        />
+        <Link
+          href="#skills"
+          text="Skills"
+          isActive={activeLink === "#skills"}
+          onClick={onLinkClick}
+        />
+        <Link
+          href="#projects"
+          text="Projects"
+          isActive={activeLink === "#projects"}
+          onClick={onLinkClick}
+        />
+        <Link
+          href="#contact"
+          text="Contact Me"
+          isActive={activeLink === "#contact"}
+          onClick={onLinkClick}
+        />
       </div>
 
       {/* Right - Desktop Resume Button / Mobile Hamburger */}
@@ -54,13 +74,39 @@ const Navbar = ({ activeLink, onLinkClick, isOpen, onToggleMenu }) => {
             <a href="#" className="flex items-center gap-2">
               <img src={logo} alt="Logo" className="h-10 w-auto" />
             </a>
-            <button onClick={onToggleMenu} className="text-4xl">&times;</button>
+            <button onClick={onToggleMenu} className="text-4xl">
+              &times;
+            </button>
           </div>
           <div className="flex flex-col gap-6 text-center mt-6">
-            <Link href="#about" text="About Me" className="text-xl" isActive={activeLink === "#about"} onClick={onLinkClick} />
-            <Link href="#skills" text="Skills" className="text-xl" isActive={activeLink === "#skills"} onClick={onLinkClick} />
-            <Link href="#projects" text="Projects" className="text-xl" isActive={activeLink === "#projects"} onClick={onLinkClick} />
-            <Link href="#contact" text="Contact Me" className="text-xl" isActive={activeLink === "#contact"} onClick={onLinkClick} />
+            <Link
+              href="#about"
+              text="About Me"
+              className="text-xl"
+              isActive={activeLink === "#about"}
+              onClick={onLinkClick}
+            />
+            <Link
+              href="#skills"
+              text="Skills"
+              className="text-xl"
+              isActive={activeLink === "#skills"}
+              onClick={onLinkClick}
+            />
+            <Link
+              href="#projects"
+              text="Projects"
+              className="text-xl"
+              isActive={activeLink === "#projects"}
+              onClick={onLinkClick}
+            />
+            <Link
+              href="#contact"
+              text="Contact Me"
+              className="text-xl"
+              isActive={activeLink === "#contact"}
+              onClick={onLinkClick}
+            />
             <div className="pt-2 flex justify-center">
               <Button text="Resume" icon={downloadIcon} onClick={downloadCV} />
             </div>
