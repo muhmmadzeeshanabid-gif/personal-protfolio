@@ -22,7 +22,6 @@ const Contact = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // ✅ UPDATED: All validations except website
   const validate = () => {
     let newErrors = {};
 
@@ -34,7 +33,6 @@ const Contact = () => {
       newErrors.email = true;
     }
 
-    // ❌ website validation removed
     // if (!formData.website.trim()) newErrors.website = true;
 
     if (!formData.message.trim()) newErrors.message = true;
@@ -203,23 +201,30 @@ const Contact = () => {
 
                 <div className="flex items-center gap-4">
                   <a
- href="https://github.com/muhmmadzeeshanabid-gif"
-  target="_blank"
-  rel="noopener noreferrer"                    className="social-icon group"
+                    href="https://github.com/muhmmadzeeshanabid-gif"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon group"
                   >
                     <img src={social5} alt="icon" />
                   </a>
-                  <a href="https://www.facebook.com/profile.php?id=61588081470113"
-  target="_blank"
-  rel="noopener noreferrer" className="social-icon group">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61588081470113"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon group"
+                  >
                     <img src={social3} alt="facebook" />
                   </a>
                   {/* <a href="#" className="social-icon group">
                     <img src={social2} alt="Twitter" />
                   </a> */}
-                  <a  href="https://www.linkedin.com/in/muhammad-zeeshan-abid-205185385/"
-  target="_blank"
-  rel="noopener noreferrer" className="social-icon group">
+                  <a
+                    href="https://www.linkedin.com/in/muhammad-zeeshan-abid-205185385/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon group"
+                  >
                     <img src={social4} alt="linkedin" />
                   </a>
                 </div>

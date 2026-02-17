@@ -40,7 +40,7 @@
   --line-height-btn: 24px;
   --line-height-btn2: 20px;
 
-  /* Letter Spacing (Tracking) */
+  /* Letter Spacing */
   --tracking-tight: -0.02em;
   --tracking-wide: 0.02em;
 
@@ -51,8 +51,10 @@
 @import "tailwindcss";
 
 @layer components {
+  /* Base Button */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-[var(--radius-btn)] transition-all duration-200 font-semibold tracking-[var(--tracking-wide)];
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-[var(--radius-btn)]
+           transition-all duration-200 font-semibold tracking-[var(--tracking-wide)];
   }
 
   /* Medium Button */
@@ -65,39 +67,43 @@
     @apply px-4 py-2 text-sm leading-5;
   }
 
-  /* Primary Button Style (Small & Forced Hover) */
+  /* Primary Button — Main Logic */
   .btn-primary {
     @apply bg-primary-black text-primary-white border-2 border-transparent transition-all;
     padding: 8px 18px !important;
     width: fit-content;
   }
 
+  /* Icon white by default */
   .btn-primary img {
     @apply filter invert;
   }
 
+  /* Hover → Gray */
   .btn-primary:hover {
     background-color: #71717a !important;
     border-color: #71717a !important;
-    @apply text-primary-white opacity-100;
     color: white !important;
   }
 
+  /* ACTIVE → Transparent + Black Border/Text */
   .btn-primary:active,
   .btn-primary.active {
-    @apply bg-primary-white text-primary-black border-primary-black;
+    background-color: transparent !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
   }
 
+  /* Icon becomes black when active */
   .btn-primary:active img,
   .btn-primary.active img {
-    @apply filter-none;
-    /* Icon becomes black on white background */
+    filter: none !important;
   }
 
-  /* Nav Link Style */
+  /* Nav Link */
   .nav-link {
-    @apply font-bold cursor-pointer transition-all border-b-2 border-transparent text-base leading-6 text-primary-black pb-1;
-    border-bottom-color: transparent !important;
+    @apply font-bold cursor-pointer transition-all border-b-2 border-transparent 
+           text-base leading-6 text-primary-black pb-1;
   }
 
   .nav-link:hover {
@@ -116,8 +122,6 @@
     @apply font-extrabold uppercase;
   }
 
-  /* Strong outlined text: big stroke with visible fill (stroke painted first)
-     Use for hero headings where you want bold outline + fill on top */
   .text-outline-strong {
     -webkit-text-stroke: 6px #000000;
     -webkit-text-fill-color: #ffffff;
@@ -126,8 +130,6 @@
     @apply font-extrabold uppercase;
   }
 
-  /* Inverse variant: white stroke with dark fill (use on light backgrounds)
-     Adjust stroke width as needed */
   .text-outline-inverse {
     -webkit-text-stroke: 3px #ffffff;
     -webkit-text-fill-color: #000000;
@@ -136,9 +138,10 @@
     @apply font-extrabold uppercase;
   }
 
-  /* Custom Input & Textarea Style */
+  /* Input Field */
   .input-field {
-    @apply w-full p-4 border-2 border-black rounded-[var(--radius-btn)] transition-all duration-200 bg-primary-white text-primary-black font-semibold outline-none;
+    @apply w-full p-4 border-2 border-black rounded-[var(--radius-btn)]
+           transition-all duration-200 bg-primary-white text-primary-black font-semibold outline-none;
     border-color: #000000 !important;
   }
 
@@ -151,9 +154,10 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* Social Icon Style */
+  /* Social Icons */
   .social-icon {
-    @apply w-12 h-12 flex items-center justify-center border-2 border-primary-black rounded-[var(--radius-btn)] transition-all bg-primary-white text-primary-black;
+    @apply w-12 h-12 flex items-center justify-center border-2 border-primary-black
+           rounded-[var(--radius-btn)] transition-all bg-primary-white text-primary-black;
   }
 
   .social-icon:hover,
@@ -172,13 +176,16 @@
     @apply filter invert;
   }
 
-  /* Tag styles */
+  /* Tags */
   .tag-about {
-    @apply inline-block border-b-2 border-primary-black font-bold text-[length:var(--font-size-btn)] leading-[var(--line-height-btn)];
+    @apply inline-block border-b-2 border-primary-black font-bold 
+           text-[length:var(--font-size-btn)] leading-[var(--line-height-btn)];
   }
 
   .tag-category {
-    @apply inline-flex items-center gap-2 px-4 py-2 border-2 border-primary-black rounded-[var(--radius-btn)] font-bold text-[length:var(--font-size-h6)] leading-[var(--line-height-h6)];
+    @apply inline-flex items-center gap-2 px-4 py-2 border-2 border-primary-black 
+           rounded-[var(--radius-btn)] font-bold 
+           text-[length:var(--font-size-h6)] leading-[var(--line-height-h6)];
   }
 }
 
