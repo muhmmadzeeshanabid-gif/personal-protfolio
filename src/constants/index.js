@@ -1,10 +1,10 @@
 // Logo
-import logo from "../assets/logo/Logo.svg";
+import logo from "../assets/logo/logo.svg";
 
 // Skill Icons
 import figma from "../assets/skillicon/icon-figma.svg";
 import git from "../assets/skillicon/icon-git.svg";
-import javascript from "../assets/skillicon/icon-javscript.svg";
+import javascript from "../assets/skillicon/icon-javascript.svg";
 import tailwind from "../assets/skillicon/icon-tailwindcss.svg";
 import typescript from "../assets/skillicon/icon-typescript.svg";
 import html from "../assets/skillicon/icon-html.svg";
@@ -12,6 +12,13 @@ import css from "../assets/skillicon/icon-css.svg";
 import jquery from "../assets/skillicon/icon-jquery.svg";
 import reactIcon from "../assets/skillicon/icon-react.svg";
 import bootstrap from "../assets/skillicon/icon-bootstrap.svg";
+
+// Project Images
+import screenImg from "../assets/projects/project-brainwave.png";
+import ecommerceImg from "../assets/projects/project-bar-law.png";
+
+// Experience Icons
+import droidorIcon from "../assets/cardsicon/droidor.png";
 
 export const skills = [
   // First row on desktop
@@ -29,24 +36,61 @@ export const skills = [
 ];
 
 // Colors
-export const colors = {
-  // Primary Colors
-  black: "#000000",
-  neutral: "#404040",
-  white: "#ffffff",
+export const projects = [
+  {
+    id: "01",
+    title: "Brainwave - AI Chat Demo",
+    description:
+      "A fully responsive AI Chat UI built using React, JSX, and Tailwind CSS. This project includes smooth animations, interactive chat components, and a modern layout inspired by real AI chat experiences.",
+    image: screenImg,
+    link: "https://brainwave-orcin-six.vercel.app/",
+  },
+  {
+    id: "02",
+    title: "Bar Law - Professional Law Firm Website",
+    description:
+      "A clean and modern Law Firm website created with React and Tailwind CSS. The site features practice areas, lawyer profiles, testimonials, and a professional layout suitable for legal services. Fully responsive and optimized for fast loading.",
+    image: ecommerceImg,
+    link: "https://bar-law-website.vercel.app/",
+  },
+];
 
-  // Brand grays for buttons / hovers
-  primaryGray: "#525252",
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sarah",
+    role: "Developer",
+    content:
+      "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
+    avatar: "https://i.pravatar.cc/150?u=1",
+  },
+  {
+    id: 2,
+    name: "Flora Sheen",
+    role: "Designer",
+    content:
+      "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
+    avatar: "https://i.pravatar.cc/150?u=2",
+  },
+  {
+    id: 3,
+    name: "Rimsha",
+    role: "Designer",
+    content:
+      "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
+    avatar: "https://i.pravatar.cc/150?u=3",
+  },
+];
 
-  // Zinc
-  zinc100: "#f4f4f5",
-  zinc200: "#e4e4e7",
-  zinc300: "#d4d4d8",
-  zinc500: "#71717a",
-  zinc800: "#27272a",
-
-  // Error
-  error500: "#ef4444",
-};
+export const experiences = [
+  {
+    company: "Droidor",
+    role: "Frontend Intern",
+    period: "2025 - Present",
+    icon: droidorIcon,
+    description:
+      "I have been doing my internship at Droidor since 2025, where I work as a Frontend Intern. My role includes building responsive UI components, improving user experience, fixing bugs, and collaborating with the development team to develop real-world features using React and Tailwind CSS.",
+  },
+];
 
 export { logo };

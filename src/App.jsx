@@ -1,16 +1,16 @@
 import React from "react";
-import Header from "./components/Header.jsx";
+import Header from "./components/header/Header.jsx";
 import Skills from "./components/Skills.jsx";
-import Experience from "./components/Experience.jsx";
+import Experience from "./components/experience/Experience.jsx";
 import About from "./components/About.jsx";
-import Projects from "./components/Projects.jsx";
-import Testimonials from "./components/Testimonials.jsx";
-import Contact from "./components/Contact.jsx";
+import Projects from "./components/projects/Projects.jsx";
+import Testimonials from "./components/testimonials/Testimonials.jsx";
+import Contact from "./components/contact/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
-    <div>
+    <div className="font-sora">
       <Header />
       <Skills />
       <Experience />

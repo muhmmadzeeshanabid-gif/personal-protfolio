@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import Button from "./Button";
-import Link from "./Link";
-import downloadIcon from "../assets/othericon/download.svg";
+import Navbar from "../navbar/Navbar";
+import Hero from "../hero/Hero";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState(null);
@@ -12,7 +9,6 @@ const Header = () => {
   const handleLinkClick = (href) => {
     setActiveLink(href);
     setIsOpen(false);
-    // Smooth scroll to section
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
