@@ -1,6 +1,6 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCard";
-import { experiences } from "../../constants";
+import { experiences } from "../../../constants";
 
 const Experience = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import social3 from "../../assets/socialicon/facebook.svg";
-import social4 from "../../assets/socialicon/linkedin.svg";
-import social5 from "../../assets/socialicon/icons8-github.svg";
+import social3 from "../../../assets/socialicon/facebook.svg";
+import social4 from "../../../assets/socialicon/linkedin.svg";
+import social5 from "../../../assets/socialicon/icons8-github.svg";
 
 const SocialLinks = () => {
   const linkClass =

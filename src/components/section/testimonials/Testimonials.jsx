@@ -1,6 +1,6 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
-import { testimonials } from "../../constants";
+import { testimonials } from "../../../constants";
 
 const Testimonials = () => {
   return (

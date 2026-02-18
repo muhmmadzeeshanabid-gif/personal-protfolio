@@ -1,5 +1,5 @@
 import React from "react";
-import linkIcon from "../../assets/othericon/read-more.svg";
+import linkIcon from "../../../assets/othericon/read-more.svg";
 
 const ProjectCard = ({ project, reverse }) => {
   return (

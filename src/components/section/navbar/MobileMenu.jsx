@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../Button";
+import Button from "../../common/Button";
 import Brand from "./Brand";
 import NavLinks from "./NavLinks";
-import downloadIcon from "../../assets/othericon/icon-download.svg";
+import downloadIcon from "../../../assets/othericon/icon-download.svg";
 
 const MobileMenu = ({ activeLink, onLinkClick, onToggleMenu, onDownload }) => {
   return (

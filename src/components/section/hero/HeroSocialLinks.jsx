@@ -1,7 +1,7 @@
 import React from "react";
-import facebookIcon from "../../assets/socialicon/facebook.svg";
-import linkedinIcon from "../../assets/socialicon/linkedin.svg";
-import githubIcon from "../../assets/socialicon/icons8-github.svg";
+import facebookIcon from "../../../assets/socialicon/facebook.svg";
+import linkedinIcon from "../../../assets/socialicon/linkedin.svg";
+import githubIcon from "../../../assets/socialicon/icons8-github.svg";
 
 const ICON_CLASS =
   "w-6 h-6 transition-all group-hover:filter group-hover:invert";
