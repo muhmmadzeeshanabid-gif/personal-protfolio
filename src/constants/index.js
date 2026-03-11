@@ -16,6 +16,7 @@ import bootstrap from "../assets/skillicon/icon-bootstrap.svg";
 // Project Images
 import screenImg from "../assets/projects/project-brainwave.png";
 import ecommerceImg from "../assets/projects/project-bar-law.png";
+import dashboardImg from "../assets/projects/project-dashboard.png";
 
 // Experience Icons
 import droidorIcon from "../assets/cardsicon/droidor.png";
@@ -52,6 +53,16 @@ export const projects = [
       "A clean and modern Law Firm website created with React and Tailwind CSS. The site features practice areas, lawyer profiles, testimonials, and a professional layout suitable for legal services. Fully responsive and optimized for fast loading.",
     image: ecommerceImg,
     link: "https://bar-law-website.vercel.app/",
+  },
+  {
+    id: "03",
+    title: "Dashboard UI - Analytics Overview",
+    description:
+      "A responsive dashboard interface built in React (JSX) with custom media queries. It includes KPI cards, charts, and a clean admin-style layout optimized for both desktop and mobile.",
+    image: dashboardImg,
+    link: "https://dashboard-lovat-ten-88.vercel.app/",
+    imageFit: "cover",
+    imagePosition: "left",
   },
 ];
 

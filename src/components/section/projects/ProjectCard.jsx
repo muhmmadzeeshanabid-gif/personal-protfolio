@@ -15,20 +15,52 @@ const ProjectCard = ({ project, reverse }) => {
           rel={project.link ? "noreferrer noopener" : undefined}
           className="md:hidden block"
         >
-          <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group cursor-pointer border border-zinc-800">
+          <div
+            className={`relative overflow-hidden rounded-2xl ${
+              project.imageAspect === "wide" ? "aspect-[16/9]" : "aspect-[4/3]"
+            } group cursor-pointer border border-zinc-800`}
+          >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className={`w-full h-full ${
+                project.imageFit === "contain" ? "object-contain" : "object-cover"
+              } ${
+                project.imagePosition === "top"
+                  ? "object-top"
+                  : project.imagePosition === "bottom"
+                  ? "object-bottom"
+                  : project.imagePosition === "left"
+                  ? "object-left"
+                  : project.imagePosition === "right"
+                  ? "object-right"
+                  : "object-center"
+              } transition-transform duration-500 group-hover:scale-110`}
             />
           </div>
         </a>
 
-        <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group cursor-pointer border border-zinc-800 hidden md:block">
+        <div
+          className={`relative overflow-hidden rounded-2xl ${
+            project.imageAspect === "wide" ? "aspect-[16/9]" : "aspect-[4/3]"
+          } group cursor-pointer border border-zinc-800 hidden md:block`}
+        >
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className={`w-full h-full ${
+              project.imageFit === "contain" ? "object-contain" : "object-cover"
+            } ${
+              project.imagePosition === "top"
+                ? "object-top"
+                : project.imagePosition === "bottom"
+                ? "object-bottom"
+                : project.imagePosition === "left"
+                ? "object-left"
+                : project.imagePosition === "right"
+                ? "object-right"
+                : "object-center"
+            } transition-transform duration-500 group-hover:scale-110`}
           />
         </div>
       </div>
