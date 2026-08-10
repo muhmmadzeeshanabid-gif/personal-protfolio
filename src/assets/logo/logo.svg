@@ -1,0 +1,6 @@
+<svg width="220" height="40" viewBox="0 0 220 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="5" width="30" height="30" rx="8" fill="#000000" />
+  <path d="M11 15L16 20L11 25" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="18" y1="25" x2="23" y2="25" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="42" y="27" fill="#000000" font-family="'Sora', sans-serif" font-weight="800" font-size="20" letter-spacing="-0.5">&lt;Zeeshan<tspan fill="#38bdf8" font-family="monospace" font-weight="700">.Dev</tspan> /&gt;</text>
+</svg>

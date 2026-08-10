@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap");
+
+@config "../tailwind.config.js";
+
+@import "tailwindcss";
+
+.text-stroke-responsive {
+  -webkit-text-stroke: 2px #000000;
+  -webkit-text-fill-color: #ffffff;
+  paint-order: stroke fill;
+  color: #ffffff;
+}
+
+@media (min-width: 640px) {
+  .text-stroke-responsive {
+    -webkit-text-stroke: 4px #000000;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-stroke-responsive {
+    -webkit-text-stroke: 6px #000000;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
